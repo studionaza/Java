@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b59b9ed5-e995-4723-896a-9b005684477a">
+    <property name="ireport.zoom" value="1.0"/>
+    <property name="ireport.x" value="0"/>
+    <property name="ireport.y" value="0"/>
+    <queryString>
+		<![CDATA[SELECT codigo, operador, email, sexo, usuario, celular, nivel, data, resp FROM operadores]]>
+    </queryString>
+    <field name="CODIGO" class="java.lang.Integer"/>
+    <field name="USUARIO" class="java.lang.String"/>
+    <field name="CELULAR" class="java.lang.String"/>
+    <field name="NIVEL" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="32" splitType="Stretch"/>
+    </title>
+    <pageHeader>
+        <band height="35" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="22" splitType="Stretch">
+            <staticText>
+                <reportElement style="Column header" x="327" y="4" width="69" height="18" forecolor="#000000" uuid="ebf1b6a8-57d1-4944-99cf-d026b769fbda"/>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Celular]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="26" y="4" width="88" height="18" forecolor="#000000" uuid="47f3b377-c3d1-40c0-9f54-fb1996123af3"/>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Operador]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="266" y="4" width="55" height="18" forecolor="#000000" uuid="7d8c4926-7611-4211-8f72-c8af1cdb6409"/>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Nível]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="503" y="4" width="42" height="18" forecolor="#000000" uuid="d104216c-6e33-42ba-8c49-af1686838e08"/>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Sexo]]></text>
+            </staticText>
+            <staticText>
+                <reportElement style="Column header" x="-2" y="4" width="69" height="18" forecolor="#000000" uuid="6db2878b-52bf-4c61-a2e0-7cc11ef235f7"/>
+                <textElement>
+                    <font isBold="false"/>
+                </textElement>
+                <text><![CDATA[Código]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="27" splitType="Stretch">
+            <textField isStretchWithOverflow="true">
+                <reportElement style="Detail" positionType="Float" x="327" y="2" width="170" height="18" uuid="a549d9f8-671c-463f-ba6d-d9eceed0d04f"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{CELULAR}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="Detail" positionType="Float" x="503" y="0" width="19" height="18" uuid="969ce310-f716-4c09-8405-1a486bf51d81"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{SEXO}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="Detail" positionType="Float" x="26" y="0" width="174" height="18" uuid="da3ca81b-0429-4745-9458-09c42b765aa9"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{USUARIO}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="Detail" positionType="Float" x="266" y="0" width="27" height="18" uuid="bc1172e7-b306-4893-a811-f764ff4bcaff"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{NIVEL}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="Detail" positionType="Float" x="4" y="0" width="63" height="18" uuid="6ae49df0-51d0-46b6-8370-53024ddcfec0"/>
+                <textElement>
+                    <font size="14"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{CODIGO}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch">
+            <line>
+                <reportElement positionType="FixRelativeToBottom" x="-2" y="0" width="555" height="1" uuid="78c5af14-196a-4d2b-a368-89f8fec28e96"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#999999"/>
+                </graphicElement>
+            </line>
+        </band>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
